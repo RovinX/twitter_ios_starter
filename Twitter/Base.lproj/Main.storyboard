@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="300" y="86.806596701649184"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Home-->
         <scene sceneID="UI4-1v-0eS">
             <objects>
-                <tableViewController id="vZE-U3-hkq" sceneMemberID="viewController">
+                <tableViewController id="vZE-U3-hkq" customClass="HomeTableTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FZc-oU-WY9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +70,14 @@
                             <outlet property="delegate" destination="vZE-U3-hkq" id="f7n-gM-IIW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="KwT-if-v5b"/>
+                    <navigationItem key="navigationItem" title="Home" id="KwT-if-v5b">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="RPe-rh-Bre">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="onLogout:" destination="vZE-U3-hkq" id="Kd2-1p-zV1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmA-O1-W3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,6 +90,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vOe-5c-S1w">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.29693867439999999" green="1" blue="0.98096874030000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="vZE-U3-hkq" kind="relationship" relationship="rootViewController" id="Woe-6N-rAR"/>
